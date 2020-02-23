@@ -1,0 +1,53 @@
+public static void main(String[] args) 
+	{
+		// Znajdowanie pierwiastków równania kwadratowego ax^2+bx+c=0
+		//przyjmując założenia, że : a=/0 oraz b^2 >4ac.
+		Scanner in = new Scanner(System.in);
+		System.out.println("Czas na delte z naszego równania Ax^2 + Bx + C = 0 \n Podaj wartość A");
+		double A = 0;
+		double B = 0;
+		double C = 0;
+		while (A == 0)
+		{
+			A = in.nextInt();
+			if (A == 0) 
+				{
+				System.out.println("Wartość A musi być różna od 0");
+				System.out.println("Podaj wartość A ponownie");
+				}
+		}
+		System.out.println("Podana wartość A wynosi " + A);		
+		System.out.println("Podaj wartość B");
+		B = in.nextInt(); 
+		System.out.println("Podana wartość B wynosi " + B);
+		System.out.println("Podaj wartość C");
+		C = in.nextInt();
+		double Delta = (B*B)-(4*A*C);
+		 	if ( Delta < 0 ) 
+		 		{
+		 			System.out.println("Brak punktów wspólnych"); //Delta poniżej 0
+		 		}
+		 	
+		 	if ( Delta == 0  )
+		 		{
+		 			double Delta0 = 0;
+		 			Delta0 = (-B) / (2*A);
+		 			System.out.println("Delta jest równa 0 dlatego punkt wspólny jest jeden: " + Delta0  ); // Delta równa 0
+				}  
+		
+		 	if ( Delta > 0  )
+		 	{
+		 		double X1 = ((-B)-(Math.sqrt(Delta)) / (2*A) );
+		 		double X2 = ((-B)+(Math.sqrt(Delta)) / (2*A) );
+		 		System.out.println("Delta wynosi"+ Delta + "Dlatego punkty wspólne to: " + X1 + "\n" + X2);
+		 		System.out.format("%.2f%n", X1);
+		 	}
+		
+		
+	}
+
+
+zmienna1 = 3
+zmienna2 = 6
+zmienna3 = zmienna/zmienna2
+return zmienna3
